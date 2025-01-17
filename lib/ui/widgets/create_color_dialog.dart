@@ -26,6 +26,7 @@ class _CreateColorDialogState extends State<CreateColorDialog> {
   /// Controller for the blue color value
   TextEditingController blueController = TextEditingController();
 
+
   @override
   Widget build(BuildContext context) {
     return AlertDialog(

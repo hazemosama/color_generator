@@ -1,4 +1,4 @@
-import 'package:color_generator/ui/home_screen.dart';
+import 'package:color_generator/ui/screens/home_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {

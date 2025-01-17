@@ -34,7 +34,8 @@ class _HomeScreenState extends State<HomeScreen> {
   void _copyCurrentColor() {
     Clipboard.setData(
       ClipboardData(
-        text: backgroundColor.toString(),
+        text:
+            '''RGB color: (${backgroundColor.red}, ${backgroundColor.green}, ${backgroundColor.blue})''',
       ),
     );
 
@@ -45,8 +46,6 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
     );
   }
-
-
 
   void _createCustomColor() {
     showDialog(
@@ -67,11 +66,14 @@ class _HomeScreenState extends State<HomeScreen> {
         backgroundColor: Colors.transparent,
         elevation: 0,
         actions: [
-          CustomButton(
-            foregroundColor: foregroundColor,
-            icon: Icons.refresh,
-            text: 'RESET',
-            onPressed: _resetColor,
+          Padding(
+            padding: const EdgeInsets.only(right: 12),
+            child: CustomButton(
+              foregroundColor: foregroundColor,
+              icon: Icons.refresh,
+              text: 'RESET',
+              onPressed: _resetColor,
+            ),
           ),
         ],
         systemOverlayStyle: SystemUiOverlayStyle(
